@@ -1,14 +1,16 @@
 <template>
-  <nav class="nav container">
-    <router-link to="/">
-      <img src="../assets/logo.png" alt="" class="nav__logo-img" />
-    </router-link>
-    <router-link to="/login">
-      <button class="btn-user">Signin</button>
-    </router-link>
-    <router-link to="/signup">
-      <button class="btn-user">SignUp</button>
-    </router-link>
+  <nav>
+    <div class="container">
+      <router-link to="/">
+        <img src="../assets/logo.png" alt="" class="nav__logo-img" />
+      </router-link>
+      <router-link to="/login">
+        <button class="btn-user">Login</button>
+      </router-link>
+      <router-link to="/signup">
+        <button class="btn-user">SignUp</button>
+      </router-link>
+    </div>
   </nav>
 </template>
 <script>
@@ -17,25 +19,30 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@400;500;600;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 .container {
   max-width: 968px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.nav {
-  height: 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.8rem;
+}
+
+nav {
+  height: 4rem;
+  background-color: aquamarine;
+  padding: 10px 20px;
 }
 
 .nav__logo-img {
-  width: 11rem;
+  width: 7.5rem;
 }
 
 button {
