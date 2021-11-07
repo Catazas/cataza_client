@@ -1,13 +1,13 @@
 <template>
   <nav>
     <div class="container">
-      <router-link to="/">
-        <img src="../assets/logo.png" alt="" class="nav__logo-img" />
-      </router-link>
-      <router-link to="/login">
+      <a href="/">
+        <img src="../assets/images/logo.png" alt="" class="nav__logo-img" />
+      </a>
+      <a href="/login">
         <button class="btn-user">Login</button>
-      </router-link>
-      <router-link to="/signup">
+      </a>
+      <router-link to="/about">
         <button class="btn-user">SignUp</button>
       </router-link>
     </div>
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@400;500;600;900&display=swap');
 
 * {

@@ -7,7 +7,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Navbar from '@/components/Navbar.vue';
 
 export default {
@@ -20,5 +19,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>
