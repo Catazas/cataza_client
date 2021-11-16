@@ -7,20 +7,20 @@
       <a href="/login">
         <button class="btn-user">Login</button>
       </a>
-      <router-link to="/about">
+      <a href="/signup">
         <button class="btn-user">SignUp</button>
-      </router-link>
+      </a>
     </div>
   </nav>
 </template>
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
 };
 </script>
 
 <style scope>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@400;500;600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@400;500;600;900&display=swap");
 
 * {
   padding: 0;
@@ -54,7 +54,7 @@ button {
 .btn-user {
   background-color: #62d2a2;
   border-radius: 25px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.765rem;
   color: white;
   padding: 6px 13px;

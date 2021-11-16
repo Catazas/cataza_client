@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
+import Navbar from "@/components/Navbar.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   created() {
-    document.title = 'Cataza | Jual Beli Ganja Murah';
+    document.title = "Cataza | Jual Beli Ganja Murah";
   },
   components: {
     Navbar,
