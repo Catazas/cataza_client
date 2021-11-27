@@ -8,12 +8,18 @@
           </h2>
           <h2 class="top_two_font fadeIn first">Register</h2>
         </div>
-        <form>
+        <form @submit="handleLogin">
           <div class="submit__form">
             <label class="fadeIn second">Username atau Email</label>
-            <input class="fadeIn second" type="text" placeholder="ID" />
+            <input
+              v-model="emailOrUsername"
+              class="fadeIn second"
+              type="text"
+              placeholder="ID"
+            />
             <label class="fadeIn third">Password</label>
             <input
+              v-model="password"
               class="fadeIn third"
               type="password"
               placeholder="Password"
@@ -46,6 +52,31 @@ export default {
   name: "Login",
   created() {
     document.title = "Login | Cataza Indonesia";
+  },
+  data() {
+    return {
+      emailOrUsername: "",
+      password: "",
+    };
+  },
+  methods: {
+    handleLogin(e) {
+      e.preventDefault();
+      const payload = {
+        emailOrUsername: this.emailOrUsername,
+        password: this.password,
+      };
+
+      this.$store
+        .dispatch("login", payload)
+        .then(({ data }) => {
+          localStorage.setItem("access_token", data.access_token);
+          this.$router.push("/");
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+        });
+    },
   },
 };
 </script>
