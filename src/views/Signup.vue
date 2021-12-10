@@ -3,11 +3,7 @@
     <div class="bg__description">
       <img src="../assets/images/logo.png" alt="Logo" class="img__logo" />
       <div class="neon">#1 Catalog Belanja Murah</div>
-      <img
-        src="../assets/images/bg-signup.svg"
-        alt="Catalog"
-        class="img__svg"
-      />
+      <img src="../assets/images/bg-signup.svg" alt="Catalog" class="img__svg" />
     </div>
     <div class="wrapper">
       <div class="form__container">
@@ -35,15 +31,15 @@
 
 <script>
 export default {
-  name: "Signup",
+  name: 'Signup',
   created() {
-    document.title = "SignUp | Cataza Indonesia";
+    document.title = 'SignUp | Cataza Indonesia';
   },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Base */
 * {
@@ -53,7 +49,7 @@ export default {
 }
 
 .signup {
-  height: 126vh;
+  height: 125vh;
   background: #150050;
   display: flex;
   padding: 60px 60px 40px 60px;
@@ -69,7 +65,7 @@ a:visited {
 
 label {
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   color: #2f86a6;
 }
@@ -98,7 +94,7 @@ form {
 
 .txt__description {
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #2f86a6;
   text-decoration: underline #34be82;
   font-weight: 700;
@@ -113,19 +109,17 @@ form {
 .neon {
   animation: neonAnim 2s alternate-reverse infinite;
   color: #99feff;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 34px;
   margin-bottom: 5rem;
   font-weight: 700;
 }
 @keyframes neonAnim {
   from {
-    text-shadow: 0 0 10px rgba(153, 254, 255, 0.7),
-      0 0 40px rgba(153, 254, 255, 0.7), 0 0 100px rgba(153, 254, 255, 0.7);
+    text-shadow: 0 0 10px rgba(153, 254, 255, 0.7), 0 0 40px rgba(153, 254, 255, 0.7), 0 0 100px rgba(153, 254, 255, 0.7);
   }
   to {
-    text-shadow: 0 0 5px rgba(153, 254, 255, 0.7),
-      0 0 20px rgba(153, 254, 255, 0.7), 0 0 60px rgba(153, 254, 255, 0.7);
+    text-shadow: 0 0 5px rgba(153, 254, 255, 0.7), 0 0 20px rgba(153, 254, 255, 0.7), 0 0 60px rgba(153, 254, 255, 0.7);
   }
 }
 /* Style Section Form */
@@ -140,7 +134,7 @@ form {
 
 .text__header {
   font-size: 28px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   color: #6166b3;
   text-decoration: underline #17d7a0;
@@ -174,22 +168,16 @@ form {
 }
 
 .btn-hover.color-3 {
-  background-image: linear-gradient(
-    to right,
-    #667eea,
-    #764ba2,
-    #6b8dd6,
-    #8e37d7
-  );
+  background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+input[type='text'],
+input[type='password'],
+input[type='email'] {
   margin-bottom: 25px;
   border-radius: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   height: 40px;
   padding: 10px;
@@ -202,7 +190,7 @@ input[type="email"] {
   justify-content: center;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   width: 100%;
   text-align: center;
   padding: 13px 0;
@@ -216,26 +204,20 @@ input[type="submit"] {
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-position: 100% 0;
   transition: all 0.4s ease-in-out;
 }
 
-input[type="submit"]:focus {
+input[type='submit']:focus {
   outline: none;
 }
 
-input[type="submit"].color-9 {
-  background-image: linear-gradient(
-    to right,
-    #25aae1,
-    #4481eb,
-    #04befe,
-    #3f86ed
-  );
+input[type='submit'].color-9 {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 </style>

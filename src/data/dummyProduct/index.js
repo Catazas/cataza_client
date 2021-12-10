@@ -1,0 +1,51 @@
+import { Shoes, Bicycle, Glasses, Hoodie, Mask, SlingBag, Watch } from '../../assets';
+export const dummyProduct = [
+  {
+    id: 1,
+    titleProduct: 'Sepatu Adidas Mercurial',
+    costProduct: 'IDR. 125K',
+    costDiscount: 'IDR. 150K',
+    address: 'Jakarta',
+    image: Shoes,
+  },
+  {
+    id: 2,
+    titleProduct: 'Sepeda Sport Family Edition',
+    costProduct: 'IDR. 950K',
+    costDiscount: 'IDR. 1500K',
+    address: 'Tangerang Selatan',
+    image: Bicycle,
+  },
+  {
+    id: 3,
+    titleProduct: 'Kacamata Anti Silau',
+    costProduct: 'IDR. 90K',
+    costDiscount: 'IDR. 150K',
+    address: 'Bogor',
+    image: Glasses,
+  },
+  {
+    id: 4,
+    titleProduct: 'Hoodie Ganja Special Edition',
+    costProduct: 'IDR. 250K',
+    costDiscount: 'IDR. 3500K',
+    address: 'Depok',
+    image: Hoodie,
+  },
+  {
+    id: 5,
+    titleProduct: 'Masker Sensian Bau Apek 1 Pcs',
+    costProduct: 'IDR. 15K',
+    costDiscount: 'IDR. 20K',
+    address: 'Tangerang',
+    image: Mask,
+  },
+  {
+    id: 6,
+    titleProduct: 'Tas Selempang Anti Air',
+    costProduct: 'IDR. 50K',
+    costDiscount: 'IDR. 70K',
+    address: 'Bandung',
+    image: SlingBag,
+  },
+];

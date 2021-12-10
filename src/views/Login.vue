@@ -3,21 +3,15 @@
     <div class="wrapper fadeInDown">
       <div class="box__container">
         <div class="top__font">
-          <h2 class="top_one_font fadeIn first">
-            Doesn't have an account yet?
-          </h2>
-          <h2 class="top_two_font fadeIn first">Register</h2>
+          <h2 class="top_one_font fadeIn first">Doesn't have an account yet?</h2>
+          <a href="/signup" class="top_two_font fadeIn first">Register</a>
         </div>
         <form>
           <div class="submit__form">
             <label class="fadeIn second">Username atau Email</label>
             <input class="fadeIn second" type="text" placeholder="ID" />
             <label class="fadeIn third">Password</label>
-            <input
-              class="fadeIn third"
-              type="password"
-              placeholder="Password"
-            />
+            <input class="fadeIn third" type="password" placeholder="Password" />
           </div>
           <div class="txt__forget">
             <h2 class="fadeIn fourth">Forgot Password?</h2>
@@ -32,9 +26,7 @@
           <hr color="black" size="1" width="20%" />
         </div>
         <div class="btn__google">
-          <button type="button" class="fadeIn fourth login-with-google-btn">
-            Sign in with Google
-          </button>
+          <button type="button" class="fadeIn fourth login-with-google-btn">Sign in with Google</button>
         </div>
       </div>
     </div>
@@ -43,15 +35,15 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   created() {
-    document.title = "Login | Cataza Indonesia";
+    document.title = 'Login | Cataza Indonesia';
   },
 };
 </script>
 
 <style scope>
-@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@700&family=Quicksand:wght@700&family=Roboto:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@700&family=Quicksand:wght@700&family=Roboto:wght@700&display=swap');
 
 * {
   margin: 0;
@@ -61,7 +53,7 @@ export default {
 
 .login {
   height: 110vh;
-  background: url("../assets/images/bg-login.png") no-repeat;
+  background: url('../assets/images/bg-login-new.png') no-repeat;
   background-size: 100%;
 }
 
@@ -79,14 +71,15 @@ a {
 .top_one_font {
   font-size: 20px;
   margin-right: 7px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 .top_two_font {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: #d825bb;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* Form */
@@ -97,17 +90,17 @@ a {
 }
 
 .submit__form label {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   font-size: 24px;
   margin-bottom: 6px;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type='text'],
+input[type='password'] {
   padding: 12px;
   border: #c5b6ae solid 3px;
   border-radius: 15px;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   outline: none;
   box-shadow: 0 3px 4px grey;
 }
@@ -120,11 +113,11 @@ input[type="password"] {
   margin-bottom: 40px;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   padding: 12px 50px;
   border-radius: 15px;
   border: none;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: white;
   outline: none;
@@ -144,7 +137,7 @@ input[type="submit"] {
 }
 
 .txt__forget h2 {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   font-size: 20px;
 }
 
@@ -156,7 +149,7 @@ input[type="submit"] {
 
 .or__signin h2 {
   font-size: 24px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 /* Structure */
@@ -260,7 +253,7 @@ input[type="submit"] {
   color: black;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
   background-color: #fff5f5;
