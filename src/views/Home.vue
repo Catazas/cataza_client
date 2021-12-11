@@ -6,6 +6,8 @@
     <div class="container">
       <img src="../assets/images/banner-slide.png" alt="Banner" class="img-banner" />
       <DealsToday />
+      <SpecialPrice />
+      <GamingSet />
     </div>
   </div>
 </template>
@@ -13,6 +15,8 @@
 <script>
 import Navbar from '@/components/Navbar.vue';
 import DealsToday from '@/components/DealsToday.vue';
+import SpecialPrice from '@/components/SpecialPrice.vue';
+import GamingSet from '@/components/GamingSet.vue';
 
 export default {
   name: 'Home',
@@ -22,6 +26,8 @@ export default {
   components: {
     Navbar,
     DealsToday,
+    SpecialPrice,
+    GamingSet,
   },
 };
 </script>

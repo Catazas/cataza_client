@@ -11,15 +11,23 @@
           <a href="/"><i class="bx bx-arrow-back"></i> Back to Home</a>
         </button>
         <span class="text__header">Sign Up</span>
-        <form>
+        <form @submit="handleSignUp">
           <label for="fullname">Full Name</label>
-          <input type="text" placeholder="Input Your Name" />
+          <input v-model="fullname" type="text" placeholder="Input Your Name" />
           <label for="username">Username</label>
-          <input type="text" placeholder="Input Your Username" />
+          <input
+            v-model="username"
+            type="text"
+            placeholder="Input Your Username"
+          />
           <label for="email">Email</label>
-          <input type="email" placeholder="Input Your Email" />
+          <input v-model="email" type="email" placeholder="Input Your Email" />
           <label for="password">Password</label>
-          <input type="password" placeholder="Input Password min 8-digit" />
+          <input
+            v-model="password"
+            type="password"
+            placeholder="Input Password min 8-digit"
+          />
           <div class="btn__submit">
             <input class="color-9" type="submit" value="Register" />
           </div>
@@ -34,6 +42,36 @@ export default {
   name: 'Signup',
   created() {
     document.title = 'SignUp | Cataza Indonesia';
+  },
+  data() {
+    return {
+      fullname: "",
+      username: "",
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    handleSignUp(e) {
+      e.preventDefault();
+
+      const payload = {
+        fullname: this.fullname,
+        username: this.username,
+        email: this.email,
+        password: this.password,
+      };
+
+      this.$store
+        .dispatch("register", payload)
+        .then(({ data }) => {
+          console.log(data);
+          this.$router.push("/login");
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+        });
+    },
   },
 };
 </script>

@@ -6,12 +6,26 @@
           <h2 class="top_one_font fadeIn first">Doesn't have an account yet?</h2>
           <a href="/signup" class="top_two_font fadeIn first">Register</a>
         </div>
-        <form>
+        <form @submit="handleLogin">
           <div class="submit__form">
             <label class="fadeIn second">Username atau Email</label>
-            <input class="fadeIn second" type="text" placeholder="ID" />
+            <input
+              v-model="emailOrUsername"
+              class="fadeIn second"
+              type="text"
+              placeholder="ID"
+            />
             <label class="fadeIn third">Password</label>
+<<<<<<< HEAD
             <input class="fadeIn third" type="password" placeholder="Password" />
+=======
+            <input
+              v-model="password"
+              class="fadeIn third"
+              type="password"
+              placeholder="Password"
+            />
+>>>>>>> a094b2f20d1e66e5b66ce42f64893d79ca97456a
           </div>
           <div class="txt__forget">
             <h2 class="fadeIn fourth">Forgot Password?</h2>
@@ -38,6 +52,31 @@ export default {
   name: 'Login',
   created() {
     document.title = 'Login | Cataza Indonesia';
+  },
+  data() {
+    return {
+      emailOrUsername: "",
+      password: "",
+    };
+  },
+  methods: {
+    handleLogin(e) {
+      e.preventDefault();
+      const payload = {
+        emailOrUsername: this.emailOrUsername,
+        password: this.password,
+      };
+
+      this.$store
+        .dispatch("login", payload)
+        .then(({ data }) => {
+          localStorage.setItem("access_token", data.access_token);
+          this.$router.push("/");
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+        });
+    },
   },
 };
 </script>

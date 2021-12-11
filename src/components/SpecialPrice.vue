@@ -1,10 +1,10 @@
 <template>
-  <div class="container-deals-today">
-    <div class="font-deals-today">
-      <h2>Deals Today</h2>
+  <div class="container-special-price">
+    <div class="font-special-price">
+      <h2>Special Price</h2>
       <span>See All</span>
     </div>
-    <div class="wrapper-deals-today">
+    <div class="wrapper-special-price">
       <span class="arw-right"><i class="bx bxs-chevron-right"></i></span>
       <div class="box-item-deals">
         <span class="cost-product">IDR. 125K</span>
@@ -16,19 +16,18 @@
 </template>
 <script>
 export default {
-  name: 'DealsToday',
+  name: 'SpecialPrice',
 };
 </script>
-
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-.container-deals-today {
+.container-special-price {
   width: 100%;
   margin-top: 30px;
 }
 
-.font-deals-today {
+.font-special-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,19 +35,19 @@ export default {
   font-family: 'Poppins', sans-serif;
 }
 
-.font-deals-today h2 {
+.font-special-price h2 {
   font-size: 20px;
   color: black;
   font-weight: 700;
 }
 
-.font-deals-today span {
+.font-special-price span {
   font-size: 16px;
   color: #d825bb;
   font-weight: 700;
 }
 
-.wrapper-deals-today {
+.wrapper-special-price {
   width: 100%;
   background-color: #ffa9f1;
   display: flex;
